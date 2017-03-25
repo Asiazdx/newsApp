@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="x5-fullscreen" content="true"/>
+    <!--只支持X5内核-->
+    <meta name="full-screen" content="yes"/>
+    <!--只支持UC浏览器-->
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/login.css"/>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_6k56tmsp61es714i.css"/>
+    <script type="text/javascript" src="js/zepto.js"></script>
+    <script type="text/javascript" src="js/touch.min.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+    <title>钛媒体</title>
+</head>
+<body>
+<div id="logo">
+    <div></div>
+    <div></div>
+</div>
+<form action="users/login" method="post">
+    <div class="user">
+        <i class="iconfont icon-user"></i>
+        <input type="text" value="用户名" name="username" id="username"/>
+    </div>
+    <div class="pass">
+        <i class="iconfont icon-password"></i>
+        <input type="password" value="123456" name="password" id="password"/>
+    </div>
+    <div class="other">
+        <a href="reg">注册账号</a>
+        <i class="iconfont icon-yuanquan"></i>
+        <a href="#">忘记密码</a>
+    </div>
+    <div class="sub">
+        <input type="submit" value="确定" id="submit">
+    </div>
+</form>
+<div id="loginOther">第三方登录
+</div>
+</body>
+</html>

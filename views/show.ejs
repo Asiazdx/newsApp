@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/show.css"/>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_4q5nv0p2t2249529.css"/>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/base.js"></script>
+    <script type="text/javascript" src="../js/touch.min.js"></script>
+    <script type="text/javascript" src="../js/iscroll.js"></script>
+    <script type="text/javascript" src="../js/show.js"></script>
+    <title>钛媒体</title>
+<body>
+<div id="newsImg" style="background-image: url('../<%=data.con.imgUrl%>')">
+</div>
+<div id="con">
+    <h1><%=data.con.title%></h1>
+    <p><%=data.con.time%></p>
+    <div>
+        <%=data.con.con%>
+    </div>
+    <div id="liuyan">
+        <h1>留言</h1>
+        <ul>
+        <%for(var i=0;i<data.liuyan.length;i++){%>
+           <li>
+               <p class="username"><%=data.liuyan[i].username%></p>
+               <div class="liuyanCon">
+                   <%=data.liuyan[i].pinglunCon%>
+               </div>
+           </li>
+       <%}%>
+       </ul>
+    </div>
+</div>
+<div id="pinglun">
+<textarea id="pinglunCon" rows="10">
+
+</textarea>
+<input type="button" value="发表" id="sub">
+<input type="button" value="取消" id="cancle">
+</div>
+<div id="conCover">
+    <input type="hidden" value="<%=data.con.id%>" id="aid">
+</div>
+<ul id="liuyan">
+
+</ul>
+<footer>
+    <i class="iconfont icon-back"></i>
+    <div class="right">
+        <i class="iconfont icon-zhuanfa"></i>
+        <!--<i class="iconfont icon-like"></i>-->
+        <i class="iconfont icon-pinglun"></i>
+    </div>
+</footer>
+</body>
+</html>

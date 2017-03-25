@@ -1,0 +1,136 @@
+/*µ¼º½*/
+#nav{
+    width: 100%;
+    height: 1.2rem;
+    background: #161616;
+    color: #fff;
+    font-size: 0.36rem;
+    position: absolute;
+    top: 0;
+    margin: 0 auto;
+}
+#nav ul li{
+    width: 0.6rem;
+    height: 100%;
+    text-align: center;
+}
+#nav .swiper-slide a{
+    display: block;
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    line-height:1.5rem;
+    color: #ccc;
+    box-sizing: border-box;
+    font-size: 0.34rem;
+}
+
+#lunbo{
+    width: 100%;
+    height: 3.2rem;
+    position: absolute;
+    top: 1.2rem;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+}
+#swiper2{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+}
+#lunbo a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 0.3rem;
+    color: #fff;
+}
+#lunbo .title{
+    width: 40%;
+    background: #000;
+    text-align: center;
+    opacity: 0.7;
+    position: absolute;
+    letter-spacing: 0.05rem;
+    top: 1.2rem;
+    left: 0.5rem;
+    padding: 0.1rem;
+}
+#mainList{
+    width: 100%;
+    height: 7rem;
+    position: absolute;
+    top: 4.77rem;
+}
+#mainList li{
+    width: 100%;
+    height: 2.2rem;
+    margin-bottom: 0.2rem;
+}
+#mainList li:nth-child(3){
+    margin-bottom: 0;
+}
+#newsImg{
+    width:30%;
+    height:100%;
+    float: left;
+}
+#newsTitle{
+    width: 70%;
+    height: 100%;
+    float: right;
+}
+#newsTitle div{
+    margin-top: 0.1rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.2rem;
+    font-size: 0.34rem;
+    letter-spacing: 0.05rem;
+    margin-left: 0.2rem;
+    color: #3C3C3C;
+}
+#newsTitle span{
+    display: block;
+    float: right;
+    font-size: 0.3rem;
+    margin-top: 0.4rem;
+    margin-right: 0.2rem;
+    color: #7B7B7B;
+}
+footer{
+    width: 100%;
+    height:1.2rem;
+    background: #000;
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    font-size: 0.3rem;
+    color: #fff;
+}
+.menu{
+    width: 100%;
+    height: 100%;
+}
+.menuList{
+    float: left;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+}
+.menuList a{
+    color: #fff;
+}
+.menuList .iconfont{
+    display: block;
+    font-size: 0.54rem;
+}
+.menuList span{
+    display: block;
+    width: 100%;
+    font-size: 0.3rem;
+    margin-top: 0.1rem;
+    text-align: center;
+}

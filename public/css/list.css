@@ -1,0 +1,144 @@
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+}
+#head{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background:#171717;
+    padding-left: 20px;
+}
+#head .icon-back{
+    color: #fff;
+    font-size: 25px;
+}
+#head span{
+    display: block;
+    position: absolute;
+    left: 150px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    font-size: 20px;
+    color: #fff;
+}
+#cname{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-left: 5px solid #3AF6F6;
+    font-size: 20px;
+    font-weight: 600;
+    color: #2B2B2B;
+    font-family:Helvetica, Arial, sans-serif;
+    padding-left: 10px;
+    letter-spacing:2px;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    line-height: 45px;
+    font-size: 16px;
+    text-align: center;
+    background: #e6e6e6;
+}
+#wrapper{
+    position: absolute;
+    top: 90px;
+    bottom: 48px;
+    left: 0;
+    width: 100%;
+}
+#scroller li{
+    padding: 0 10px;
+    height: 100px;
+    line-height: 100px;
+    background: #ecf6ff;
+    margin-top: 10px;
+    position: relative;
+}
+#scroller li img{
+    width: 80px;
+    height: 80px;
+    display: block;
+    float: left;
+    margin-top: 10px;
+}
+#scroller li div{
+    float: right;
+    position: absolute;
+    margin-left: 100px;
+    box-sizing: border-box;
+    padding-top: 10px;
+    top: 0;
+    height: 70%;
+    line-height: 30px;
+    overflow: hidden;
+}
+#scroller li span{
+    display: block;
+    font-size: 15px;
+    color: #666;
+    position: absolute;
+    right: 5px;
+    bottom: 2px;
+    line-height: 20px;
+    height: 20px;
+    z-index: 999;
+}
+#pullDown, #pullUp {
+    background:#fff;
+    height:40px;
+    line-height:40px;
+    padding:5px 10px;
+    border-bottom:1px solid #ccc;
+    font-weight:bold;
+    font-size:14px;
+    color:#888;
+    text-align: center;
+}
+#pullDown .pullDownIcon, #pullUp .pullUpIcon {
+    display:block; float:left;
+    width:40px; height:40px;
+    background: url(../imgs/iscroll.png) 0 0 no-repeat;
+    -webkit-background-size:40px 80px; background-size:40px 80px;
+    -webkit-transition-property:-webkit-transform;
+    -webkit-transition-duration:250ms;
+}
+#pullDown .pullDownIcon {
+    -webkit-transform:rotate(0deg) translateZ(0);
+}
+#pullUp .pullUpIcon {
+    -webkit-transform:rotate(-180deg) translateZ(0);
+}
+/*css3动画效果代码*/
+#pullDown.flip .pullDownIcon {
+    -webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullUp.flip .pullUpIcon {
+    -webkit-transform:rotate(0deg) translateZ(0);
+}
+
+#pullDown.loading .pullDownIcon, #pullUp.loading .pullUpIcon {
+    background-position:0 100%;
+    -webkit-transform:rotate(0deg) translateZ(0);
+    -webkit-transition-duration:0ms;
+
+    -webkit-animation-name:loading;
+    -webkit-animation-duration:2s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:linear;
+}
+
+@-webkit-keyframes loading {
+    from { -webkit-transform:rotate(0deg) translateZ(0); }
+    to { -webkit-transform:rotate(360deg) translateZ(0); }
+}

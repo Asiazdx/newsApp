@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/home.css"/>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_6k56tmsp61es714i.css"/>
+    <script type="text/javascript" src="js/zepto.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/swiper.animate.min.js"></script>
+    <script type="text/javascript" src="js/iscroll.js"></script>
+    <script type="text/javascript" src="js/home.js"></script>
+    <title>钛媒体</title>
+</head>
+<body>
+    <div id="nav" class="swiper-container">
+            <ul class="swiper-wrapper" id="swiper2">
+                <%for(var i=0;i<data.navData.length;i++){%>
+                <li class="swiper-slide">
+                    <a href='/list/<%=data.navData[i].cid%>'><%=data.navData[i].cname%></a>
+                </li>
+                <% }%>
+            </ul>
+    </div>
+            <div class="swiper-container" id="lunbo">
+                <ul class="swiper-wrapper">
+                    <%for(var i=0;i<data.lunboData.length;i++){%>
+                    <li class="swiper-slide">
+                        <a href='/show/<%=data.lunboData[i].id%>'style="background-image: url('<%=data.lunboData[i].imgUrl%>')">
+                            <div class="title">
+                                <%=data.lunboData[i].title%>
+                            </div>
+                        </a>
+                    </li>
+                    <% }%>
+                </ul>
+            </div>
+            <ul id="mainList">
+                    <%for(var j=0;j<data.listData.length;j++){%>
+                    <li>
+                        <a href='/show/<%=data.listData[j].id%>'>
+                            <div id="newsImg">
+                                <img src="<%=data.listData[j].imgUrl%>" width="100%" height="100%"/>
+                            </div>
+                            <div id="newsTitle">
+                                <div><%=data.listData[j].title%></div>
+                                <span><%=data.listData[j].time%></span>
+                            </div>
+                        </a>
+                    </li>
+                    <% }%>
+            </ul>
+    <footer>
+        <ul class="menu">
+            <li class="menuList">
+                <a href="javascript:">
+                    <i class="iconfont icon-yuedu"></i>
+                    <span>阅&nbsp;读</span>
+                </a>
+            </li>
+            <li class="menuList">
+                <a href="javascript:">
+                    <i class="iconfont icon-faxian"></i>
+                    <span>发&nbsp;现</span>
+                </a>
+            </li>
+            <li class="menuList">
+                <a href="javascript:">
+                    <i class="iconfont icon-chanpin"></i>
+                    <span>产&nbsp;品</span>
+                </a>
+            </li>
+            <li class="menuList">
+                <a href="javascript:">
+                    <i class="iconfont icon-user"></i>
+                    <span>我&nbsp;的</span>
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>

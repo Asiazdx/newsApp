@@ -1,0 +1,60 @@
+#icon{
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 2.4rem;
+    background-image: url("../imgs/startPage.png");
+    background-size: cover;
+    background-position: center;
+}
+#time{
+    width: 80%;
+    height: 1rem;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 2.6rem;
+    line-height: 1rem;
+    font-size: 0.3rem;
+    color: #999;
+}
+a{
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 1rem;
+    width: 50%;
+    height: 1rem;
+    font-size: 0.36rem;
+    color: #999;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1rem;
+}
+#tip{
+    position: fixed;
+    right: 0.5rem;
+    top: 1rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background: #7C8B98;
+    opacity: 0.5;
+    font-size: 0.3rem;
+    text-align: center;
+    line-height: 0.8rem;
+    color: #fff;
+}
+#tip div{
+    opacity: 1;
+}
+#date{
+    letter-spacing: 0.06rem;
+}

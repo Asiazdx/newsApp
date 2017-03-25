@@ -1,0 +1,154 @@
+
+#newsImg{
+    width: 100%;
+    height: 4rem;
+    position: absolute;
+}
+#conCover{
+    width: 7.5rem;
+    height: 12.14rem;
+    margin-top: 0;
+    z-index: 1;
+    background:#2D343C;
+    opacity: 0;
+}
+#con{
+    width: 100%;
+    position: absolute;
+    top: 4rem;
+    bottom: 1.2rem;
+    overflow: auto;
+    padding:0.2rem;
+    z-index: 1000;
+}
+#con h1{
+    width: 90%;
+    margin: 0 auto;
+    font-size: 0.4rem;
+    color: #3F3F3F;
+    box-sizing: border-box;
+    margin-top: 0.2rem;
+    font-weight: 600;
+}
+#con p{
+    width: 90%;
+    margin: 0 auto;
+    font-size: 0.3rem;
+    color: #666;
+    margin-top: 0.3rem;
+}
+#con div{
+    width: 90%;
+    margin: 0 auto;
+    padding: 0.1rem;
+    font-size: 0.34rem;
+    color: #666;
+    margin-top: 0.4rem;
+    text-align: left;
+    line-height: 0.6rem;
+}
+footer{
+    width: 100%;
+    height: 1.2rem;
+    box-sizing: border-box;
+    border-top: 0.01rem solid #ccc;
+    background: #F0F0F0;
+    position: absolute;
+    bottom: 0;
+    line-height: 1.2rem;
+}
+footer .iconfont{
+    display: block;
+    float: left;
+    font-size: 0.45rem;
+    color: #3F3F3F;
+}
+footer .right{
+    width: 60%;
+    float: right;
+    padding-right: 0.3rem;
+}
+footer .right .iconfont{
+    float: right;
+}
+.icon-back{
+ margin-left: 0.3rem;
+}
+.icon-pinglun{
+    float: right;
+  margin-right: 0.3rem;
+}
+.icon-like{
+   margin-right: 0.3rem;
+}
+.icon-zhuanfa{
+  float: right;
+ margin-right: 0.3rem;
+}
+#pinglun{
+    width: 90%;
+    position: fixed;
+    bottom: 3rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: #fff;
+    z-index: 999;
+    opacity: 0;
+}
+#pinglun textarea{
+    display: block;
+    width: 98%;
+    margin: 0 auto;
+    border: 0.01rem solid #F2CB83;
+    font-size: 0.3rem;
+    color: #666;
+}
+
+#sub{
+    width: 1.4rem;
+    height: 0.6rem;
+    text-align: center;
+    color: #333;
+    font-size: 0.36rem;
+    letter-spacing: 0.1rem;
+    float: right;
+    margin-right: 0.2rem;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+    background: #cfcfcf;
+    border: 0;
+}
+#cancle{
+    width: 1.4rem;
+    height: 0.6rem;
+    text-align: center;
+    color: #333;
+    font-size: 0.36rem;
+    letter-spacing: 0.1rem;
+    float: right;
+    margin-right: 0.2rem;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+    background: #cfcfcf;
+    border: 0;
+}
+#liuyan{
+    border-top: 1px solid blue;
+}
+#liuyan h1{
+    width: 100%;
+    height: 0.8rem;
+    text-align: right;
+    color: blue;
+    font-size: 0.36rem;
+}
+#liuyan li{
+    border: 1px solid #ccc;
+    margin-top: 0.2rem;
+}
+#liuyan li .username{
+    font-size: 0.36rem;
+    color: #333;
+    font-weight: 600;
+}

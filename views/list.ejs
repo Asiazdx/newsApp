@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+    <title>钛媒体</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_4q5nv0p2t2249529.css"/>
+    <link rel="stylesheet" href="../css/list.css"/>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/touch.min.js"></script>
+</head>
+<body>
+
+<div class="header">
+    <div id="head">
+        <i class="iconfont icon-back"></i>
+        <span>新闻列表</span>
+    </div>
+    <div id="cname">
+        <%=data.cname%>
+    </div>
+</div>
+<div id="wrapper">
+    <div id="scroller">
+        <div id="pullDown">
+            <span class="pullDownIcon"></span>
+            <span class="pullDownLabel">下拉刷新</span>
+        </div>
+        <ul id="thelist">
+            <%for(var i=0;i<data.list.length;i++){%>
+                <li>
+                    <a href='/show/:'+<%=data.list[i].id%>>
+                    <img src="../<%=data.list[i].imgUrl%>">
+                    <div class="list">
+                        <%=data.list[i].title%>
+                    </div>
+                    <span class="time">
+                        <%=data.list[i].time%>
+                    </span>
+                    </a>
+                </li>
+            <%}%>
+        </ul>
+        <div id="pullUp">
+            <span class="pullUpIcon"></span>
+            <span class="pullUpLabel">上拉加载更多</span>
+        </div>
+    </div>
+</div>
+<div class="footer"></div>
+
+<script type="text/javascript" src="../js/iscroll.js"></script>
+<script type="text/javascript" src="../js/list.js"></script>
+
+</body>
+</html>
