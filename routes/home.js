@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mysql=require('../com/mysql');
-var async=require("async");
+var async=require("async");//异步处理模块
 /*获取首页内容*/
 router.use('/',function(req,res,next){
     var navData=[];

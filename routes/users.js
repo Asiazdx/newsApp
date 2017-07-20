@@ -14,7 +14,7 @@ router.use('/login',function(req,res,next){
     if(rows){
       for(var i=0;i<rows.length;i++){
         if(rows[i].username==username&&rows[i].password==password){
-         req.session.username=username;
+        req.session.username=username;
          res.redirect('/home');
          break;
         }

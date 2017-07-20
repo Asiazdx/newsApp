@@ -1,58 +1,72 @@
 var express = require('express');
 var path = require('path');
-var mysql=require("./com/mysql");
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var session=require("express-session");
-var crypto=require("crypto");
-var child=require("child_process");//ÒıÈë½ø³ÌÄ£¿é
-var ejs=require('ejs');
-var users = require('./routes/users');
-var login=require('./routes/login');
-var yindao=require('./routes/yindao');
-var begin=require('./routes/begin');
-var error=require('./routes/error');
-var reg=require('./routes/reg');
-var home=require('./routes/home');
-var list=require('./routes/list');
-var show=require('./routes/show');
-var pinglun=require('./routes/pinglun');
+var mysql=require('./com/mysql');//å¼•å…¥æ•°æ®åº“é“¾æ¥æ¨¡å—
+var session=require("express-session");//å¼•å…¥sessionæ¨¡å—
+var crypto=require("crypto");//åŠ å¯†æ¨¡å—
+var child=require("child_process");//å¼•å…¥å­è¿›ç¨‹æ¨¡å—
+var ejs=require('ejs');//ejsæ¨¡æ¿å¼•æ“æ¨¡å—
+
+
+
+var begin=require('./routes/begin');//å¯åŠ¨é¡µ
+var login=require('./routes/login');//ç™»å½•é¡µ
+var reg=require('./routes/reg');//æ³¨å†Œç•Œé¢
+var users = require('./routes/users');//ç”¨æˆ·ä¸­å¿ƒ
+var home=require('./routes/home');//é¦–é¡µ
+var list=require('./routes/list');//åˆ—è¡¨é¡µ
+var show=require('./routes/show');//å†…å®¹é¡µ
+var pinglun=require('./routes/pinglun');//è¯„è®º
+var error=require('./routes/error');//ä¿¡æ¯æé†’
+var index = require('./routes/index');//å¼•å¯¼é¡µ
+
 var app = express();
-app.use(session({ secret: 'keyboard cat', name:"abc",cookie: {  }}));
-// view engine setup
+
+// è®¾ç½®æ¨¡æ¿å¼•æ“
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-//app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-global.rootPath=__dirname;
-//¿ªÆô×Ó½ø³Ì
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));//appå›¾æ ‡é»˜è®¤è·¯å¾„
+//app.use(logger('dev'));//ç”Ÿæˆæ—¥å¿—
+app.use(bodyParser.json());//å¯¹jsonæ ¼å¼çš„postä¿¡æ¯è§£æ
+app.use(bodyParser.urlencoded({ extended: false }))//å¯¹urlencodedæ ¼å¼çš„postä¿¡æ¯è¿›è¡Œè§£æ
+app.use(cookieParser());//è§£æwebæµè§ˆå™¨é‡Œçš„cookieä¿¡æ¯
+app.use(session({ secret: 'keyboard cat', name:"abc",cookie: {  }}));//è®¾ç½®session
+app.use(express.static(path.join(__dirname, 'public')));//è®¾ç½®é™æ€åœ°å€
+global.rootPath=__dirname;//å…¨å±€åœ°å€ï¼ˆé¡¹ç›®æ ¹ç›®å½•ï¼‰
+
+
+//å¼€å¯ä¸€ä¸ªå­è¿›ç¨‹ç”¨æ¥çˆ¬è™«
 /*var obj=child.fork('pachong.js');
-obj.on("message",function(info){
-    console.log(info);
-});*/
-app.use('/yindao',function(req,res,next){
-    if(true){    //Òıµ¼Ò³ÍùÍùÊÇµÚÒ»´Î·ÃÎÊµÄÊ±ºò²Å»á³öÏÖ£¬Ò»°ã»áÉèÖÃÒ»¸öcookieÖµÀ´¼ÇÂ¼ÊÇ·ñµÚÒ»´Î·ÃÎÊ£¬ÕâÀïÎªÁËÑİÊ¾£¬ËùÒÔÏÈÃ»ÓĞÉèÖÃ
-        next();
-    }else{
-        res.redirect('begin');
-    }
-},yindao);
+ obj.on("message",function(info){
+ console.log(info);
+ });*/
+
+
 app.use('/begin',begin);
 app.use('/users', users);
-app.use('/login',login);
-app.use('/error',error);
-app.use('/reg',reg);
 app.use('/home',home);
+app.use('/login',login);
 app.use('/list',list);
 app.use('/show',show);
 app.use('/pinglun',pinglun);
-app.listen(18080);
+app.use('/reg',reg);
+app.use('/error',error);
+app.use('/',index);
 
+
+
+app.use(function(err, req, res, next) {
+    // set locals, only providing error in development
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+    // render the error page
+    res.status(err.status || 500);
+    res.render('error');
+});
+app.listen(18080);
